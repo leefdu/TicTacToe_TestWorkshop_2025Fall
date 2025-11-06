@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TicTacToe_Fall2023", "TicTa
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TicTacToeTest", "TicTacToeTest\TicTacToeTest.vcxproj", "{2A70FD01-5F70-4B1F-8CD6-FBA0DC294F2F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestProjectNumberTwo", "TestProjectNumberTwo\TestProjectNumberTwo.vcxproj", "{E8D7BA08-486B-4F5F-9ABB-8BFFD14BA099}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{2A70FD01-5F70-4B1F-8CD6-FBA0DC294F2F}.Release|x64.Build.0 = Release|x64
 		{2A70FD01-5F70-4B1F-8CD6-FBA0DC294F2F}.Release|x86.ActiveCfg = Release|Win32
 		{2A70FD01-5F70-4B1F-8CD6-FBA0DC294F2F}.Release|x86.Build.0 = Release|Win32
+		{E8D7BA08-486B-4F5F-9ABB-8BFFD14BA099}.Debug|x64.ActiveCfg = Debug|x64
+		{E8D7BA08-486B-4F5F-9ABB-8BFFD14BA099}.Debug|x64.Build.0 = Debug|x64
+		{E8D7BA08-486B-4F5F-9ABB-8BFFD14BA099}.Debug|x86.ActiveCfg = Debug|Win32
+		{E8D7BA08-486B-4F5F-9ABB-8BFFD14BA099}.Debug|x86.Build.0 = Debug|Win32
+		{E8D7BA08-486B-4F5F-9ABB-8BFFD14BA099}.Release|x64.ActiveCfg = Release|x64
+		{E8D7BA08-486B-4F5F-9ABB-8BFFD14BA099}.Release|x64.Build.0 = Release|x64
+		{E8D7BA08-486B-4F5F-9ABB-8BFFD14BA099}.Release|x86.ActiveCfg = Release|Win32
+		{E8D7BA08-486B-4F5F-9ABB-8BFFD14BA099}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

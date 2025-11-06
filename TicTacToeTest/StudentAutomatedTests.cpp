@@ -30,5 +30,18 @@ namespace TicTacToeTest
 			Logger::WriteMessage("Running student tests on the Board object");
 			Assert::IsTrue(true);
 		}
+
+		TEST_METHOD(VerifySomeCellIsEmpty)
+		{
+			Logger::WriteMessage("Checking if cell 1,1 is empty");
+			Assert::IsTrue(board.isSquareEmpty(1, 1));
+		}
+		TEST_METHOD(VerifyWriteACell)
+		{
+			Logger::WriteMessage("Checking if write and read");
+			Assert::IsTrue(board.isSquareEmpty(1, 1));
+			board.writeSquare(1, 1, TicTacToeBoard::X);
+			Assert::IsTrue(board.isSquareEmpty(1, 1));
+		}
 	};
 }
