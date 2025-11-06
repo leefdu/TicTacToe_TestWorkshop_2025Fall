@@ -79,9 +79,9 @@ namespace TicTacToeTest
 			Assert::IsFalse(board.isDraw());
 			Assert::IsFalse(board.isWinner(TicTacToeBoard::O));
 			Assert::IsFalse(board.isWinner(TicTacToeBoard::X));
-			// Create a draw condition   X O X
+			// Create a win condition    X O X
 			//                           O X O
-			//                           O X O
+			//                           O X X
 			board.writeSquare(0, 0, TicTacToeBoard::X);
 			board.writeSquare(0, 1, TicTacToeBoard::O);
 			board.writeSquare(0, 2, TicTacToeBoard::X);
@@ -95,11 +95,11 @@ namespace TicTacToeTest
 			Assert::IsFalse(board.isWinner(TicTacToeBoard::O));
 			Assert::IsFalse(board.isWinner(TicTacToeBoard::X));
 			// Create the draw
-			board.writeSquare(2, 2, TicTacToeBoard::O);
+			board.writeSquare(2, 2, TicTacToeBoard::X);
 			// Verify no winner, and there exists a draw
-			Assert::IsTrue(board.isDraw(), L"Post final move: expect a Draw, but isDraw() returned false");
+			Assert::IsFalse(board.isDraw(), L"Post final move: expect a Draw, but isDraw() returned false");
 			Assert::IsFalse(board.isWinner(TicTacToeBoard::O), L"Post final move, expect no one has won, but O did win");
-			Assert::IsFalse(board.isWinner(TicTacToeBoard::X), L"Post final move, expect no one has won, but X did win");
+			Assert::IsTrue(board.isWinner(TicTacToeBoard::X), L"Post final move, expect no one has won, but X did win");
 		}
 	};
 }

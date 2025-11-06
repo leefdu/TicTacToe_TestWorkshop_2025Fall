@@ -29,6 +29,10 @@ namespace TicTacToeTest
 		TEST_METHOD(HelloStudentTests) {
 			Logger::WriteMessage("Running student tests on the Board object");
 			Assert::IsTrue(true);
+		} 
+		TEST_METHOD(GetPlayer) {
+			Logger::WriteMessage("Running GetPlayer test");
+			Assert::AreEqual('X', board.getPlayerName());
 		}
 	};
 }
