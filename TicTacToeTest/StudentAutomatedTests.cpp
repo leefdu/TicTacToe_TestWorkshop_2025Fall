@@ -39,9 +39,11 @@ namespace TicTacToeTest
 		TEST_METHOD(VerifyWriteACell)
 		{
 			Logger::WriteMessage("Checking if write and read");
-			Assert::IsTrue(board.isSquareEmpty(1, 1));
+			Assert::IsTrue(board.isSquareEmpty(1, 1));   // verified square 1 1 is empty
 			board.writeSquare(1, 1, TicTacToeBoard::X);
-			Assert::IsTrue(board.isSquareEmpty(1, 1));
+			Assert::IsFalse(board.isSquareEmpty(1, 1));   // verify square 1 1 is NOT empty
+			Assert::AreEqual('X', board.getSquareContents(1, 1));
+			Assert::AreNotEqual('O', board.getSquareContents(1, 1));
 		}
 	};
 }
