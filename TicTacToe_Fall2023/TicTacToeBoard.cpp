@@ -36,6 +36,12 @@ void TicTacToeBoard::resetBoard() {
 
 // If specified space is empty - return true
 bool TicTacToeBoard::isSquareEmpty(int row, int col) const {
+	if ((row >= BOARD_NUM_ROWS) || (col >= BOARD_NUM_COLS)
+		|| (row < 0) || (col < 0)
+		) {
+		throw std::invalid_argument("Invalid row or column passed to getSquareContents\n");
+	}
+
 	if (board[row][col] == EMPTY)
 		return true;
 	else
@@ -61,7 +67,9 @@ bool TicTacToeBoard::writeSquare(int row, int col, Player currentPlayer) {
 
 // Returns character (ie player marker) in the given row/col, throws exception if args invalid
 char TicTacToeBoard::getSquareContents(int row, int col) const {
-	if ((row >= BOARD_NUM_ROWS) || (col >= BOARD_NUM_COLS)) {
+	if ((row >= BOARD_NUM_ROWS) || (col >= BOARD_NUM_COLS)
+		|| (row < 0) || (col < 0)
+	) {
 		throw std::invalid_argument("Invalid row or column passed to getSquareContents\n");
 	}
 	// else - good row & column passed
@@ -123,7 +131,7 @@ bool TicTacToeBoard::isWinner(Player playerToCheck) const {
 
 // Return true if game is a Draw - all squares filled and no one has won
 bool TicTacToeBoard::isDraw() const {
-	if ((takenSquareCount > BOARD_NUM_ROWS * BOARD_NUM_COLS) && 
+	if ((takenSquareCount >= BOARD_NUM_ROWS * BOARD_NUM_COLS) && 
 		!this->isWinner(X) && !this->isWinner(O)) {
 		return true;
 	}
